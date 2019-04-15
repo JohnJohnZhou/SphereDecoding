@@ -29,7 +29,7 @@ while (true)
     while (loop_down)
         if (~ (k == 1))
             k = k - 1;
-            p(k) = (y(k) - (u(k + 1:n) * G(k + 1:n, k))) / G(k, k);
+            p(k) = (y(k) - (u(k + 1:n) * G(k + 1:n, k))) / G(k, k)
             u(k) = round(p(k));
             gamma = (p(k) - u(k)) * G(k, k);
             step(k) = sgn(gamma);
